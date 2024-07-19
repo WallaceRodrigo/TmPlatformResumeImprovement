@@ -110,7 +110,7 @@ export interface Achievement {
   id: number;
   externalId: string;
   fullDescription: string;
-  experience: Experience;
+  experience: Experience | null;
   createdAt: string;
   lastUpdatedAt: string;
 }

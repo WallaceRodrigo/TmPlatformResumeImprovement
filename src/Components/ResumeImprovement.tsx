@@ -51,7 +51,6 @@ const ResumeImprovement = () => {
         try {
             setLoading(true);
             const response = await ImproveResme(resume);
-            console.log(response);
             
             setImprovedResume(response);
             setLoading(false);
@@ -114,7 +113,7 @@ const ResumeImprovement = () => {
                     }
                 </div>
             ) : 
-            <div>
+            <div className="resumeIdInputContainer">
                 <label htmlFor="resumeId">Resume ID:</label>
                 <input
                     type="number"

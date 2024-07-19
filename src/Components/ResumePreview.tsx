@@ -41,10 +41,14 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ improvedResume }) => {
                     </div>
                 </div>
             </div>
-            <div className="section">
-                <h2>Profile</h2>
-                <p>{improvedResume?.aboutMe.description}</p>
-            </div>
+            {
+                improvedResume?.aboutMe.description.length != 0 && (
+                    <div className="section">
+                        <h2>Profile</h2>
+                        <p>{improvedResume?.aboutMe.description}</p>
+                    </div>
+                )
+            }
             <div className="section">
                 <h2>Skills Summary</h2>
                 {Object.keys(groupedTechnologies).map((tag, index) => (
@@ -58,7 +62,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ improvedResume }) => {
                 {improvedResume.experiences?.newExperiences.map((job, index) => (
                     <div key={index}>
                         <ul>
-                            <li><strong>{job.experience.companyName}</strong>
+                            <li><strong>{job.experience.companyName.length === 0 ? "Experience" : job.experience.companyName}</strong>
                                 <div id='ExperienceSectionNameAndLocationDiv'>
                                     <p>{job.experience.title}</p>
                                     <p>{job.experience.location.locationName} {job.experience.locationType}</p>
@@ -68,6 +72,11 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ improvedResume }) => {
                                         <li key={idx}>{resp.fullDescription}</li>
                                     ))}
                                 </ul>
+                                {
+                                    job.experience.description.length != 0 && (
+                                        <p><strong>Context:</strong> {job.experience.description}</p>
+                                    )
+                                }
                             </li>
                         </ul>
                     </div>

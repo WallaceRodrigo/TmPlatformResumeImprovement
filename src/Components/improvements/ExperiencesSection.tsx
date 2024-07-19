@@ -4,6 +4,7 @@ import EditableText from '../EditableText';
 import { capitalizeFirstLetter } from '../../Services/capitalizeFirstLetter';
 import AchievementsSection from './AchievementsSection';
 import { ChatGptImproveContext } from '../../Services/api';
+import { Achievement } from '../../Domain/ResumeType';
 
 interface ExperiencesSectionProps {
     experiences: ExperienceRecommendations;
@@ -83,8 +84,9 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ experiences, on
             <h3>Experiences</h3>
             {experiences.newExperiences.map((experience, index) => (
                 <div key={index}>
-                    <h4>{experience.experience.companyName}</h4>
-                    <h5>{experience.experience.title}</h5>
+                    <h3>{experience.experience.companyName}</h3>
+                    <h4>{experience.experience.title}</h4>
+                    <h5>Context:</h5>
                     <p>
                         <EditableText
                             value={experience.experience.description}
@@ -123,8 +125,8 @@ const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ experiences, on
                     <p>
                         {experience.technologies.map((tech) => (`${capitalizeFirstLetter(tech.name)}, `).replace("undefined, ", ""))}
                     </p>
-                    {experience.achievements?.achievements && <h4><strong>Achievements:</strong></h4>}
-                    <AchievementsSection achievements={experience.achievements} experienceIndex={index} onTextChange={onTextChange} />
+                    <h4><strong>Achievements:</strong></h4>
+                        <AchievementsSection achievements={experience.achievements} experienceIndex={index} onTextChange={onTextChange} />
                     <div className="divisionBar"></div>
                 </div>
             ))}

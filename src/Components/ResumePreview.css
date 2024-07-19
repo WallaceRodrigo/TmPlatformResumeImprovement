@@ -1,9 +1,7 @@
 .resumePreviewContainer {
     padding: 50px;
     border: 1px solid #000;
-    min-width: 45vw;
-    width: 45vw;
-    max-width: 100%;
+    width: clamp(400px, 50vw, 1000px);
     overflow-x: hidden;
   }
   
@@ -90,4 +88,8 @@
     border-radius: 10px;
     font-size: 15px;
     border: none;
+  }
+
+  .resumeIdInputContainer {
+    margin-top: 50px;
   }

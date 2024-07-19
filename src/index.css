@@ -4,11 +4,35 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  text-decoration: none;
+  width: 100vw;
+}
+
+.NavButton {
+  margin: 20px;
+  background-color: #4CAF50;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
 }
 
 form {
@@ -19,7 +43,7 @@ form {
 }
 
 .dropzone {
-  border: 2px dashed #4CAF50;
+  border: 2px dashed #c6d5c7;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -150,10 +174,4 @@ button:hover {
   width: 100%;
   height: 1px;
   background-color: black;
-}
-
-.NavButton {
-  text-decoration: none;
-  margin: 10px;
-  color: #4CAF50;
 }

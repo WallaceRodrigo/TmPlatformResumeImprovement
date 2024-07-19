@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Achievements } from '../../Domain/ResumeImprovementType';
+import { Achievements, achievementsRecommendations } from '../../Domain/ResumeImprovementType';
 import EditableText from '../EditableText';
 import { ChatGptImproveAchievement } from '../../Services/api';
 import "./AchievementsSection.css";
@@ -111,6 +111,7 @@ const AchievementsSection: React.FC<AchievementsSectionProps> = ({ achievements,
                     </ol>
                 </div>
             ))}
+
             {showModal.visible && (
                 <div className="modal">
                     <div className="modal-content">

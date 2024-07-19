@@ -1,16 +1,17 @@
 import axios from "axios";
 
-const API_URL = 'http://localhost:5014';
+const LlmServiceUrl = 'http://35.229.116.111';
+const AccountUrl = 'http://34.139.9.188';
 
 export const GetResume = async (externalId: string) => {
-    const response = await axios.get(`http://localhost:5206/api/getResumeForAccount/${externalId}`,);
+    const response = await axios.get(`${AccountUrl}/api/getResumeForAccount/${externalId}`,);
 
     return response.data;
 };
 
 export const ResumeParse = async (resume: FormData, externalId: string) => {
     try {
-        const response = await axios.post(`${API_URL}/linkedin/${externalId}/parse`, resume, {
+        const response = await axios.post(`${LlmServiceUrl}/linkedin/${externalId}/parse`, resume, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -26,7 +27,7 @@ export const ResumeParse = async (resume: FormData, externalId: string) => {
 
 export const ImproveResme = async (resume: any) => {
     try {
-        const response = await axios.post(`${API_URL}/linkedin/improve`, resume);
+        const response = await axios.post(`${LlmServiceUrl}/linkedin/improve`, resume);
 
         return response.data;
     } catch (error) {
@@ -38,7 +39,7 @@ export const ImproveResme = async (resume: any) => {
 
 export const ChatGptImproveAboutMe = async (aboutMe: string) => {
     try {
-      const response = await axios.post(`${API_URL}/improveResume/aboutMe`,  aboutMe, {
+      const response = await axios.post(`${LlmServiceUrl}/improveResume/aboutMe`,  aboutMe, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -54,7 +55,7 @@ export const ChatGptImproveAboutMe = async (aboutMe: string) => {
 
   export const ChatGptImproveAchievement = async (achievement: string) => {
     try {
-      const response = await axios.post(`${API_URL}/improveResume/achievements`,  achievement, {
+      const response = await axios.post(`${LlmServiceUrl}/improveResume/achievements`,  achievement, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -70,7 +71,7 @@ export const ChatGptImproveAboutMe = async (aboutMe: string) => {
 
   export const ChatGptImproveContext = async (context: string) => {
     try {
-      const response = await axios.post(`${API_URL}/improveResume/context`,  context, {
+      const response = await axios.post(`${LlmServiceUrl}/improveResume/context`,  context, {
         headers: {
           'Content-Type': 'application/json'
         }
