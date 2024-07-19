@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Achievements, achievementsRecommendations } from '../../Domain/ResumeImprovementType';
+import { Achievements } from '../../Domain/ResumeImprovementType';
 import EditableText from '../EditableText';
 import { ChatGptImproveAchievement } from '../../Services/api';
 import "./AchievementsSection.css";

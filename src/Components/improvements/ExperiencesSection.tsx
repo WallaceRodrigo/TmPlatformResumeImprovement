@@ -4,7 +4,6 @@ import EditableText from '../EditableText';
 import { capitalizeFirstLetter } from '../../Services/capitalizeFirstLetter';
 import AchievementsSection from './AchievementsSection';
 import { ChatGptImproveContext } from '../../Services/api';
-import { Achievement } from '../../Domain/ResumeType';
 
 interface ExperiencesSectionProps {
     experiences: ExperienceRecommendations;
