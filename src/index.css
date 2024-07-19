@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dropzone {
+  border: 2px dashed #4CAF50;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropzone p {
+  color: #4CAF50;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.loading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.resume-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.resume-container h2, .resume-container h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.resume-container p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.resume-container div {
+  margin-bottom: 15px;
+}
+
+.resume-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.resume-container ul li {
+  margin-bottom: 5px;
+}
+
+.drop-files,
+.drag-files {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+}
+
+.drag-files {
+  color: #4CAF50;
+}
+
+.drop-files svg {
+  fill: #4CAF50;
+  scale: 2;
+}
+
+.pdf-preview {
+  height: 770px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pdf-preview canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navigation button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.navigation span {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.divisionBar {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.NavButton {
+  text-decoration: none;
+  margin: 10px;
+  color: #4CAF50;
+}
